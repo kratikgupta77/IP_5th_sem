@@ -1,0 +1,11 @@
+<launch>
+  <!-- Load the robot description parameter -->
+  <param name="robot_description" command="$(find xacro)/xacro --inorder '$(find turtle_pentagon)/urdf/simple_robot.urdf'" />
+  
+  <!-- Launch Gazebo -->
+  <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(arg world_file)" respawn="false" output="screen" />
+
+  <!-- Spawn the robot in Gazebo -->
+  <node name="spawn_robot" pkg="gazebo_ros" type="spawn_model" args="-param robot_description -robot_namespace '' -urdf -z 1.0 -model simple_robot" />
+</launch>
+

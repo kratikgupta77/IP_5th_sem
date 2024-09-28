@@ -1,0 +1,30 @@
+<launch>
+  <!-- Argument to determine if we are in simulation -->
+  <arg name="simulation" default="true"/>
+
+  <!-- Load the Husky robot description -->
+  <include file="$(find husky_description)/launch/description.launch"/>
+
+  <!-- Load the robot state publisher with a unique name -->
+  <node name="robort_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" output="screen"/>
+
+  <!-- Load the controllers from the Husky control package -->
+  <rosparam command="load" file="$(find husky_control)/config/control.yaml"/>
+
+  <!-- Spawns the velocity controller and joint state publisher -->
+  <node name="base_contrroller_spawner" pkg="controller_manager" type="spawner" args="husky_joint_publisher husky_velocity_controller"/>
+
+  <!-- If we are simulating, launch Gazebo -->
+  <group if="$(arg simulation)">
+    <include file="$(find husky_gazebo)/launch/empty_world.launch"/>
+  </group>
+
+  <!-- Teleoperation: Allow user to drive Husky via keyboard -->
+
+    <!-- Launch the turtle movement script -->
+  <node name="turtle_random_move" pkg="turtle_pentagon" type="move_turtle_random.py" output="screen">
+    <param name="charge" value="100"/> <!-- Set the initial charge here if desired -->
+</node>
+  
+</launch>
+
