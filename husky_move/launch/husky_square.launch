@@ -1,0 +1,9 @@
+<launch>
+    <!-- Launch the Gazebo simulation with Husky -->
+    <include file="$(find husky_gazebo)/launch/husky_playpen.launch" />
+
+    <!-- Start the Husky square movement node -->
+    <node pkg="husky_move" type="move_square.py" name="move_husky_square" output="screen" />
+</launch>
+
+
