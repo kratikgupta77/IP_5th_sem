@@ -1,0 +1,14 @@
+1- First unzip the folder
+2- copy the folder at your home directory
+3- open terminal1
+  3.1 - cd p3dx_ws
+  3.2 - catkin_make
+  3.3 - source devel/setup.bash
+  3.4 - roslaunch p3dx_gazebo p3dx.launch
+
+4- open terminal2
+  4.2 - source devel/setup.bash
+  4.2 - rosrun p3dx_description a_star_multi.py
+  
+  
+ code for a_star_multti u can go via cd p3dx_ws/src/p3dx_description/scripts/a_star_multi.py
