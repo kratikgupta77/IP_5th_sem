@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch>
+
+ <!-- Include world with table -->
+    <arg name="world_file" default="$(find p3dx_description)/world/a_star.world"/>
+<include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(arg world_file)"/>
+</include>
+   
+    <arg name="robot_model" default="$(find p3dx_description)/urdf/pioneer3dx.xacro"/>
+    <!-- Robot 1 -->
+    <arg name="ns1" default="robot1"/>
+    <arg name="x1" value="0.0" />
+    <arg name="y1" value="0.0" />
+    <arg name="z1" default="0.0" />
+    <arg name="yaw1" value="0.0" />
+
+    <group ns="$(arg ns1)">
+        <param name="tf_prefix" value="$(arg ns1)_tf" />
+        <include file="$(find p3dx_gazebo)/launch/spawn.launch">
+            <arg name="name" value="$(arg ns1)" />
+            <arg name="x" value="0.0" />
+            <arg name="y" value="$(arg y1)" />
+            <arg name="z" value="$(arg z1)" />
+            <arg name="yaw" value="$(arg yaw1)" />
+            <arg name="namespace_arg" value="$(arg ns1)" />
+            <arg name="robot_model" value="$(arg robot_model)"/>
+        </include>
+          
+    </group>
+
+    <!-- Robot 2 -->
+    <arg name="ns2" default="robot2"/>
+    <arg name="x2" value="-0.5" />
+    <arg name="y2" value="0.0" />
+    <arg name="z2" default="0.0" />
+    <arg name="yaw2" value="0.0" />
+
+    <group ns="$(arg ns2)">
+        <param name="tf_prefix" value="$(arg ns2)_tf" />
+        <include file="$(find p3dx_gazebo)/launch/spawn.launch">
+            <arg name="name" value="$(arg ns2)" />
+            <arg name="x" value="$(arg x2)" />
+            <arg name="y" value="$(arg y2)" />
+            <arg name="z" value="$(arg z2)" />
+            <arg name="yaw" value="$(arg yaw2)" />
+            <arg name="namespace_arg" value="$(arg ns2)" />
+            <arg name="robot_model" value="$(arg robot_model)"/>
+        </include>
+    </group>
+
+    <!-- Robot 3 -->
+    <arg name="ns3" default="robot3"/>
+    <arg name="x3" value="-1.0" />
+    <arg name="y3" value="0.0" />
+    <arg name="z3" default="0.0" />
+    <arg name="yaw3" value="0.0" />
+
+    <group ns="$(arg ns3)">
+        <param name="tf_prefix" value="$(arg ns3)_tf" />
+        <include file="$(find p3dx_gazebo)/launch/spawn.launch">
+            <arg name="name" value="$(arg ns3)" />
+            <arg name="x" value="$(arg x3)" />
+            <arg name="y" value="$(arg y3)" />
+            <arg name="z" value="$(arg z3)" />
+            <arg name="yaw" value="$(arg yaw3)" />
+            <arg name="namespace_arg" value="$(arg ns3)" />
+            <arg name="robot_model" value="$(arg robot_model)"/>
+        </include>
+    </group>
+
+    <!-- Robot 4 -->
+    <arg name="ns4" default="robot4"/>
+    <arg name="x4" value="-1.5" />
+    <arg name="y4" value="0.0" />
+    <arg name="z4" default="0.0" />
+    <arg name="yaw4" value="0.0" />
+
+    <group ns="$(arg ns4)">
+        <param name="tf_prefix" value="$(arg ns4)_tf" />
+        <include file="$(find p3dx_gazebo)/launch/spawn.launch">
+            <arg name="name" value="$(arg ns4)" />
+            <arg name="x" value="$(arg x4)" />
+            <arg name="y" value="$(arg y4)" />
+            <arg name="z" value="$(arg z4)" />
+            <arg name="yaw" value="$(arg yaw4)" />
+            <arg name="namespace_arg" value="$(arg ns4)" />
+            <arg name="robot_model" value="$(arg robot_model)"/>
+        </include>
+    </group>
+</launch>
+
