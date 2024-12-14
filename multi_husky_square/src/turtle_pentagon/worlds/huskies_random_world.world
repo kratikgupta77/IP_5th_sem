@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<gazebo version="1.0">
+  <world name="default">
+
+    <!-- Define the ground -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    
+    <!-- Define the walls -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Spawn Huskies at random positions -->
+    <model name="husky_1">
+      <pose>-3 2 0.1 0 0 0</pose> <!-- Random position for Husky 1 -->
+      <include>
+        <uri>model://husky</uri>
+      </include>
+    </model>
+
+    <model name="husky_2">
+      <pose>2 -3 0.1 0 0 0</pose> <!-- Random position for Husky 2 -->
+      <include>
+        <uri>model://husky</uri>
+      </include>
+    </model>
+
+    <model name="husky_3">
+      <pose>-4 -2 0.1 0 0 0</pose> <!-- Random position for Husky 3 -->
+      <include>
+        <uri>model://husky</uri>
+      </include>
+    </model>
+
+    <model name="husky_4">
+      <pose>3 4 0.1 0 0 0</pose> <!-- Random position for Husky 4 -->
+      <include>
+        <uri>model://husky</uri>
+      </include>
+    </model>
+
+    <!-- Light source and other Gazebo environment configurations -->
+    <light name="sun" type="directional">
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.9 0.9 0.9 1</diffuse>
+      <specular>0.9 0.9 0.9 1</specular>
+    </light>
+    
+  </world>
+</gazebo>
