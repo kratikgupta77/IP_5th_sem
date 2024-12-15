@@ -103,5 +103,5 @@ husky_move/
 ## **Credits**
 This project uses Clearpath Robotics' Husky robot simulation packages.
 
-For further information or issues, feel free to contact [Your Name/Email].
+For further information or issues, feel free to contact : Mintu Kumar (mintu22296@iiitd.ac.in)
 
