@@ -33,6 +33,7 @@ global_path_planning/
 ├── CMakeLists.txt            # Build configuration for ROS
 ├── package.xml               # ROS package metadata
 └── README.md                 # Project documentation
+```
 ## **Steps to Run the Project**
 
 Follow these steps to set up and execute the **Global Path Planning** project with the TurtleBot3 simulation:
@@ -44,12 +45,11 @@ Ensure the current directory is your ROS workspace. Use `catkin_make` to build t
 
 ```bash
 catkin_make
-'''
-'''source devel/setup.bash'''
+```
+```source devel/setup.bash```
 ```bash
 roslaunch ros_world turtlebot3_world.launch
 ```
-
 ```bash
 roslaunch global_path_planning turtlebot3_ros_world.launch
 ```
