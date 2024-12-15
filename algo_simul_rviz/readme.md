@@ -46,14 +46,26 @@ Ensure the current directory is your ROS workspace. Use `catkin_make` to build t
 ```bash
 catkin_make
 ```
-```source devel/setup.bash```
+```bash
+source devel/setup.
+```
+Do this in every new terminal for the 3 commands.
 ```bash
 roslaunch ros_world turtlebot3_world.launch
 ```
+launches the gazebo world.
 ```bash
 roslaunch global_path_planning turtlebot3_ros_world.launch
 ```
+launches the Rviz world.
 ```bash
 rosrun global_path_planning path_planning_server.py
 ```
+This script is a ROS service server designed for global path planning. It integrates with a ROS-based system to handle path-planning requests for a robot using various algorithms. Here’s a breakdown of its functionality:
+The script acts as a ROS service server that:
 
+Takes a costmap and start/goal indices as input.
+Executes the  path-planning algorithm.
+Visualizes the grid and path-planning process in RViz.
+Returns a planned path or an empty response if no path is found.
+Provides clean handling for node shutdown and ensures no leftover commands are sent to the robot.
