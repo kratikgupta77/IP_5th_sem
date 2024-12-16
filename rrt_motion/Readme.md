@@ -88,9 +88,10 @@ Motion planning is a critical aspect of robotics, enabling autonomous navigation
 
 
 https://github.com/user-attachments/assets/aed44a8e-8ff7-4f35-ad6e-8f74ec742e9d
+A* simulation:
 
 
-- `requirements.txt`: Lists the Python dependencies required to run the project.
+
 
 
 
