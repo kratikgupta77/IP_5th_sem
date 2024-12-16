@@ -1,16 +1,24 @@
-# RRT Motion Planning Project
+# Motion Planning Algorithms Project
 
-This project implements the Rapidly-exploring Random Tree (RRT) algorithm for motion planning, developed as part of the IP 5th Semester coursework.
+This project, developed as part of the IP 5th Semester coursework, implements several fundamental motion planning algorithms, including Rapidly-exploring Random Tree (RRT), Dijkstra's, and A* algorithms.
 
 ## Overview
 
-Rapidly-exploring Random Trees (RRT) are a popular method for efficiently navigating complex, high-dimensional spaces in robotics. They are particularly effective for pathfinding in environments with obstacles, making them suitable for various applications, including mobile robots and manipulators.
+Motion planning is a critical aspect of robotics, enabling autonomous navigation through complex environments. This project focuses on three prominent algorithms:
+
+- **Rapidly-exploring Random Tree (RRT)**: A sampling-based algorithm effective in high-dimensional spaces, particularly for pathfinding in environments with obstacles.
+
+- **Dijkstra's Algorithm**: A search-based algorithm that finds the shortest path in weighted graphs, ensuring optimality in terms of path cost.
+
+- **A* Algorithm**: An extension of Dijkstra's algorithm that incorporates heuristics to guide the search, improving efficiency by prioritizing paths that appear to lead more directly to the goal.
 
 ## Features
 
-- **RRT Algorithm**: Implements the standard RRT algorithm for path planning.
-- **Visualization**: Provides graphical representations of the planning process and the resulting paths.
-- **Obstacle Handling**: Capable of planning paths in environments with static obstacles.
+- **Algorithm Implementations**: Provides implementations of RRT, Dijkstra's, and A* algorithms for motion planning.
+
+- **Visualization**: Includes graphical representations to visualize the planning process and resulting paths for each algorithm.
+
+- **Obstacle Handling**: Capable of planning paths in environments with static obstacles, demonstrating the strengths and limitations of each algorithm.
 
 ## Installation
 
@@ -34,10 +42,59 @@ Rapidly-exploring Random Trees (RRT) are a popular method for efficiently naviga
    pip install -r requirements.txt
    ```
 
+## Usage
+
+1. **Set up the ROS environment**:
+
+   ```bash
+   source devel/setup.bash
+   ```
+
+2. **Set the TurtleBot3 model**:
+
+   ```bash
+   export TURTLEBOT3_MODEL=burger
+   ```
+
+3. **Launch the simulation environment**:
+
+   ```bash
+   roslaunch motion_planning turtlebot.launch
+   ```
+
+4. **Run the desired algorithm**:
+
+   For example, to run the A* algorithm:
+
+   ```bash
+   rosrun motion_planning Astar.py
+   ```
+
+   Replace `Astar.py` with `Dijkstra.py` or `RRT.py` to run the respective algorithms.
+
+## Project Structure
+
+- `main.py`: Entry point for running the selected motion planning algorithm.
+
+- `rrt.py`: Contains the implementation of the RRT algorithm.
+
+- `dijkstra.py`: Contains the implementation of Dijkstra's algorithm.
+
+- `astar.py`: Contains the implementation of the A* algorithm.
+
+- `config.py`: Configuration file for setting parameters like start/goal positions, obstacles, and algorithm selection.
+
+- `utils.py`: Utility functions supporting the main algorithms.
+
+- `requirements.txt`: Lists the Python dependencies required to run the project.
+
 ## References
 
 - **RRT Algorithm**: For a comprehensive understanding of RRTs, refer to Steven M. LaValle's work on Rapidly-exploring Random Trees.
-- **Motion Planning**: For an overview of motion planning algorithms, including RRTs, see the Open Motion Planning Library (OMPL) .
+
+- **Dijkstra's Algorithm**: For insights into Dijkstra's algorithm, see Edsger W. Dijkstra's original paper on graph theory.
+
+- **A* Algorithm**: For details on the A* algorithm, consult the foundational paper by Peter E. Hart, Nils J. Nilsson, and Bertram Raphael.
 
 ## Acknowledgments
 
