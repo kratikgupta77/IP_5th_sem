@@ -90,6 +90,7 @@ Motion planning is a critical aspect of robotics, enabling autonomous navigation
 https://github.com/user-attachments/assets/aed44a8e-8ff7-4f35-ad6e-8f74ec742e9d
 
 
+
 ## References
 
 - **RRT Algorithm**: For a comprehensive understanding of RRTs, refer to Steven M. LaValle's work on Rapidly-exploring Random Trees.
@@ -97,6 +98,10 @@ https://github.com/user-attachments/assets/aed44a8e-8ff7-4f35-ad6e-8f74ec742e9d
 - **Dijkstra's Algorithm**: For insights into Dijkstra's algorithm, see Edsger W. Dijkstra's original paper on graph theory.
 
 - **A* Algorithm**: For details on the A* algorithm, consult the foundational paper by Peter E. Hart, Nils J. Nilsson, and Bertram Raphael.
+
+
+https://github.com/user-attachments/assets/64b8caec-1bf6-4ffd-8651-ddb2a28173ab
+
 
 ## Acknowledgments
 
