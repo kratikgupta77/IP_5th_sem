@@ -1,0 +1,7 @@
+set(motion_planning_SETUP_PY_SETUP_MODULE "distutils.core")
+set(motion_planning_SETUP_PY_VERSION "0.0.0")
+set(motion_planning_SETUP_PY_SCRIPTS "")
+set(motion_planning_SETUP_PY_PACKAGES "utils")
+set(motion_planning_SETUP_PY_PACKAGE_DIRS "python/utils")
+set(motion_planning_SETUP_PY_MODULES "")
+set(motion_planning_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,8 @@
+prefix=/home/shashank/rrt_motion/devel
+
+Name: motion_planning
+Description: Description of motion_planning
+Version: 0.0.0
+Cflags: -I/home/shashank/rrt_motion/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

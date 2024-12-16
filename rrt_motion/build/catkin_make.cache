@@ -1,0 +1,2 @@
+motion_planning
+-DCATKIN_DEVEL_PREFIX=/home/shashank/rrt_motion/devel -DCMAKE_INSTALL_PREFIX=/home/shashank/rrt_motion/install -G Unix Makefiles
