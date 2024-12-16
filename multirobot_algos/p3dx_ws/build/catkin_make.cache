@@ -1,0 +1,2 @@
+pioneer_p3dx_model/p3dx_control:pioneer_p3dx_model/p3dx_description:pioneer_p3dx_model/p3dx_gazebo
+-DCATKIN_DEVEL_PREFIX=/home/shashank/p3dx_ws/devel -DCMAKE_INSTALL_PREFIX=/home/shashank/p3dx_ws/install -G Unix Makefiles
