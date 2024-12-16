@@ -86,7 +86,13 @@ Motion planning is a critical aspect of robotics, enabling autonomous navigation
 
 - `utils.py`: Utility functions supporting the main algorithms.
 
+
+https://github.com/user-attachments/assets/aed44a8e-8ff7-4f35-ad6e-8f74ec742e9d
+
+
 - `requirements.txt`: Lists the Python dependencies required to run the project.
+
+
 
 ## References
 
